@@ -6,7 +6,10 @@ import com.hillel.models.User;
 import com.hillel.page.objects.HomePageObject;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
+import io.restassured.config.ObjectMapperConfig;
+import io.restassured.config.RestAssuredConfig;
 import io.restassured.http.Cookies;
+import io.restassured.mapper.ObjectMapperType;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import org.openqa.selenium.By;
@@ -25,6 +28,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.mapper.ObjectMapperType.GSON;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -50,6 +54,7 @@ public class LoginTestWithNewUser {
         RestAssured.baseURI = "http://localhost";
         RestAssured.port = 80;
         RestAssured.defaultParser = Parser.JSON;
+        RestAssured.config = RestAssuredConfig.config().objectMapperConfig(new ObjectMapperConfig(GSON));
 
         user = getUser();
 
