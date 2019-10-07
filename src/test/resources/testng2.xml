@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Converter app test suite">
+
+    <test name="Temperature Converter test">
+        <classes>
+            <class name="com.hillel.TemperatureConverterTest"/>
+        </classes>
+    </test>
+
+</suite>

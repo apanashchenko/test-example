@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Login test suite">
+
+    <test name="Login test">
+        <classes>
+            <class name="com.hillel.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
