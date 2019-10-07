@@ -1,5 +1,6 @@
 package com.hillel.page.objects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,7 @@ public class CustomerLoginPopup extends BasePage {
         super(driver);
     }
 
+    @Step
     public CustomerLoginPopup inputUserName(String userName) {
         WebElement loginModalWindow = driver.findElement(popupLocator);
         WebElement userNameInput = wait.until(ExpectedConditions.visibilityOf(
@@ -25,6 +27,7 @@ public class CustomerLoginPopup extends BasePage {
         return this;
     }
 
+    @Step
     public CustomerLoginPopup inputPassword(String password) {
         WebElement loginModalWindow = driver.findElement(popupLocator);
         WebElement passwordInput = wait.until(ExpectedConditions.visibilityOf(
@@ -34,6 +37,7 @@ public class CustomerLoginPopup extends BasePage {
         return this;
     }
 
+    @Step
     public HomePageObject clickSignInBtn() {
         WebElement signInBtn = driver.findElement(popupLocator).findElement(By.cssSelector(".fa-sign-in"));
         signInBtn.click();

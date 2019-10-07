@@ -1,5 +1,6 @@
 package com.hillel.page.objects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,11 +15,13 @@ public class HomePageObject extends BasePage {
         super(driver);
     }
 
+    @Step("Open login page")
     public HomePageObject open() {
         driver.get("http://localhost/");
         return this;
     }
 
+    @Step
     public HomePageObject login(String userName, String password) {
         return clickLoginBtn()
                 .inputUserName(userName)
@@ -26,6 +29,7 @@ public class HomePageObject extends BasePage {
                 .clickSignInBtn();
     }
 
+    @Step
     public CustomerLoginPopup clickLoginBtn() {
         WebElement loginLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#login>a")));
         loginLink.click();
