@@ -67,7 +67,7 @@
                 <version>2.22.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/loginText.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/loginTest.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

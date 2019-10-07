@@ -32,9 +32,9 @@ public class LoginTest {
 
     @BeforeClass
     public void setUpBeforeClass() {
-//        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
-        WebDriverManager.operadriver().setup();
+        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
+//        WebDriverManager.operadriver().setup();
         existingUser = new User();
         existingUser.setUserName("test");
         existingUser.setFirstName("bob");
