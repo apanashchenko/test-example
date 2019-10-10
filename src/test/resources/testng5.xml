@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CollectionLambada test suite">
+
+    <test name="CollectionLambada test">
+        <classes>
+            <class name="com.hillel.CollectionLambada"/>
+        </classes>
+    </test>
+
+</suite>

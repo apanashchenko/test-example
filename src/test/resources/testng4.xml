@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CollectionExample test suite">
+
+    <test name="CollectionExample test">
+        <classes>
+            <class name="com.hillel.CollectionExample"/>
+        </classes>
+    </test>
+
+</suite>
